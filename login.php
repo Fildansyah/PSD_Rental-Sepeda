@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    require_once "config.php";
+    require_once "controller.php";
     $sql = "SELECT * FROM pelanggan WHERE username='$_POST[username]' AND password='" . md5($_POST['password']) . "'";
     if ($query = $connection->query($sql)) {
         if ($query->num_rows) {

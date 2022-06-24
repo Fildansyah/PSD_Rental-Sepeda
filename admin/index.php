@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once "../config.php";
+require_once "../controller.php";
 if (!isset($_SESSION["admin"])) {
   header('location: login.php');
 }

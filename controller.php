@@ -56,11 +56,7 @@ while ($data = $query->fetch_assoc()) {
     $connection->query("UPDATE transaksi SET pembatalan='1' WHERE id_transaksi=$data[id_transaksi]");
     $connection->query("UPDATE sepeda SET status='1' WHERE id_sepeda=$data[id_sepeda]");
 
-    if ($q->num_rows) {
-      $id = $query->fetch_assoc();
-
-      @$connection->query("DELETE FROM detail_transaksi WHERE id_transaksi=$data[id_transaksi]");
-    }
+   
   }
 }
 
